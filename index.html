@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Citi!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #255be3 60%, #ffffff 40%);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .logo {
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .logo .red-accent {
+      color: #FF4444;
+    }
+
+    .login-btn {
+      background: white;
+      color: #4169E1;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    .main-content {
+      text-align: center;
+      padding: 60px 40px 40px;
+    }
+
+    .main-title {
+      color: white;
+      font-size: 72px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .subtitle {
+      color: white;
+      font-size: 48px;
+      font-style: italic;
+      margin-bottom: 60px;
+      font-weight: 300;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+    }
+
+    .card-header {
+      background: #f8f9fa;
+      padding: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      text-align: left;
+    }
+
+    .card-image {
+      height: 200px;
+      background: #e9ecef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: left;
+      flex: 1;
+    }
+
+    .card-title {
+      color: #2563eb;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card-description {
+      color: #6b7280;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .card-disclaimer {
+      color: #9ca3af;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .apply-btn {
+      background: #255be3;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      align-self: flex-start;
+    }
+
+    .apply-btn:hover {
+      background: #1e40af;
+    }
+
+    .feedback-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .feedback-btn::before {
+      content: '▲';
+    }
+
+    @media (max-width: 1200px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .main-title {
+        font-size: 48px;
+      }
+      
+      .subtitle {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo" style="visibility: hidden;">
+      citi<span class="red-accent">+</span>
+    </div>
+    <button class="login-btn">Sign on</button>
+  </header>
+
+  <main class="main-content">
+    <h1 class="main-title">Welcome to Citi!</h1>
+    <p class="subtitle">Find the Right Product for You</p>
+
+    <div class="products-grid">
+      <!-- Credit Cards -->
+      <div class="product-card">
+        <div class="card-header">VIEW ALL CREDIT CARDS</div>
+        <div class="card-image">
+          <img src="1.png" alt="" style="height:170px;">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Credit Card Offers</h3>
+          <p class="card-description">Whether you want cash back, points for great rewards, or a low intro rate, the choice is yours.</p>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+      </div>
+
+      <!-- Double Cash Card -->
+      <div class="product-card">
+        <div class="card-header">CITI DOUBLE CASH® CARD</div>
+        <div class="card-image">
+          <img src="2.webp" alt="" style="height:170px;">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Earn $200 Cash Back After Qualifying Purchases</h3>
+          <p class="card-description">Plus, earn 2% cash back on purchases: 1% when you buy and 1% as you pay with no categories, caps, or annual fee.</p>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+      </div>
+
+      <!-- Checking Account -->
+      <div class="product-card">
+        <div class="card-header">CITI® CHECKING ACCOUNT</div>
+        <div class="card-image">
+          <img src="3.png" alt="" style="height:170px;">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Earn a cash bonus with Citi Regular Checking</h3>
+          <p class="card-description">Earn a cash bonus when you open a new Citi Regular Checking account and complete required activities.</p>
+          <p class="card-disclaimer">Offered by Citibank, N.A., Member FDIC.</p>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+      </div>
+
+      <!-- Citigold -->
+      <div class="product-card">
+        <div class="card-header">CITIGOLD</div>
+        <div class="card-image">
+          <img src="4.webp" alt="" style="height:170px;">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Access to a Wealth Team</h3>
+          <p class="card-description">Access financial planning and world-class investment platforms from Citi Personal Wealth Management.</p>
+          <p class="card-disclaimer">NOT FDIC INSURED, NO BANK GUARANTEE, MAY LOSE VALUE</p>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <button class="feedback-btn">Feedback</button>
+</body>
+</html>
